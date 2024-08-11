@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Chat</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat">
+            <h1>Socket.IO Chat</h1>
+            <div>
+                <input id="roomInput" type="text" placeholder="Enter room name" />
+                <input id="nameInput" type="text" placeholder="Enter your name" />
+                <button id="joinRoomBtn">Join Room</button>
+            </div>
+            <ul id="messages"></ul>
+            <form id="form">
+                <input id="m" autocomplete="off" placeholder="Type a message" />
+                <button>Send</button>
+            </form>
+        </div>
+        <div class="game">
+            <h2>Game Area</h2>
+            <div class="field"></div>
+            <div class="info">
+                <p>ПротивникId: <span id="opponentId">-</span></p>
+                <p>Противник Имя: <span id="opponentName">-</span></p>
+                <p>МойId: <span id="myId">-</span></p>
+                <p>Имя: <span id="myName">-</span></p>
+                <!-- Добавьте это в HTML -->
+                <button id="refreshUsers">Refresh Users</button>
+                <ul id="userList"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
